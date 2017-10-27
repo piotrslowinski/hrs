@@ -14,6 +14,11 @@ import java.time.LocalDate;
 public class Salary {
 
 
+    private String deptName;
+
+    public String getDeptName() {
+        return deptName;
+    }
 
     @Embeddable
     public static class SalaryId implements Serializable{

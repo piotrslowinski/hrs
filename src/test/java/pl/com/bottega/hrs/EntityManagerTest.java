@@ -4,10 +4,7 @@ import org.hibernate.LazyInitializationException;
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.com.bottega.hrs.model.Address;
-import pl.com.bottega.hrs.model.Employee;
-import pl.com.bottega.hrs.model.Salary;
-import pl.com.bottega.hrs.model.Title;
+import pl.com.bottega.hrs.model.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -313,6 +310,34 @@ public class EntityManagerTest {
         em.close();
     }
 
+    @Test
+    public void shouldUpdateDepartment(){
+        //given
+        Employee employeeDep = createEmployeeWithDepartment();
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(employeeDep);
+        em.close();
+        em.getTransaction().commit();
+
+//        //when
+        em = emf.createEntityManager();
+        em.getTransaction().begin();
+        employeeDep = em.find(Employee.class, 1);
+        updateDepartment(employeeDep);
+        em.close();
+        em.getTransaction().commit();
+
+//        //then
+        em = emf.createEntityManager();
+        employeeDep = em.find(Employee.class, 1);
+        assertEquals("Finance", employeeDep.getCurrentDeptName());
+//        em.getEntityManagerFactory().close();
+        em.close();
+    }
+
+
+
     private Employee createEmployeeWithNoTitle(){
         Address address = new Address("al. Warszawska 10", "Lublin");
         Title title = new Title();
@@ -336,8 +361,7 @@ public class EntityManagerTest {
     }
 
     private Employee createEmployeeWithTitle(){
-        Title.TitleId titleId = new Title.TitleId(1);
-        Title title = new Title(titleId,"managier", LocalDate.parse("1990-01-01"), LocalDate.parse("9999-01-01"));
+        Title title = new Title(1,"managier", LocalDate.parse("1990-01-01"), LocalDate.parse("9999-01-01"));
         Address address = new Address("al. Warszawska 10", "Lublin");
         Employee employee = new Employee(1,"Jan", "Nowak", LocalDate.now(), address, title);
         employee.addTitle(title);
@@ -345,14 +369,23 @@ public class EntityManagerTest {
     }
 
     private Employee createEmployeeWithSalaryAndTitle(){
-        Title.TitleId titleId = new Title.TitleId(1);
-        Title title = new Title(titleId,"managier", LocalDate.parse("1990-01-01"), LocalDate.parse("9999-01-01"));
+        Title title = new Title(1,"managier", LocalDate.parse("1990-01-01"), LocalDate.parse("9999-01-01"));
         Salary.SalaryId salaryId = new Salary.SalaryId(1,LocalDate.parse("1990-01-01"));
         Salary salary = new Salary(salaryId, 100000, LocalDate.parse("9999-01-01"));
         Address address = new Address("al. Warszawska 10", "Lublin");
         Employee employee = new Employee(1,"Jan", "Nowak", LocalDate.now(), address ,salary, title);
         employee.addTitle(title);
         employee.addSalary(salary);
+        return employee;
+    }
+
+    private Employee createEmployeeWithDepartment(){
+        Department department = new Department("d001","Marketing");
+        DepartmentAssignment deepAss = new DepartmentAssignment(1,department.getDeptNo(),LocalDate.parse("1990-01-01"),LocalDate.parse("9999-01-01"));
+        Address address = new Address("al. Warszawska 10", "Lublin");
+        Employee employee = new Employee(1,"Jan", "Nowak", LocalDate.now(), address ,deepAss);
+        employee.addDepartmentAssignment(deepAss,department);
+
         return employee;
     }
 
@@ -371,6 +404,10 @@ public class EntityManagerTest {
 
     private void updateTitle(Employee employee) {
         employee.changeTitle("specialist");
+    }
+
+    private void updateDepartment(Employee employee) {
+        employee.changeDepartment(new Department("d002","Finance"));
     }
 
     private void executeInTransaction(Consumer<EntityManager> consumer) {

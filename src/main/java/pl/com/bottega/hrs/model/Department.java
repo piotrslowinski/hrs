@@ -1,9 +1,8 @@
 package pl.com.bottega.hrs.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.stream.Collector;
 
 /**
  * Created by user on 14.10.2017.
@@ -19,6 +18,7 @@ public class Department {
     @Column(name = "dept_name")
     private String deptName;
 
+
     public Department(){}
 
     public Department(String deptNo, String deptName){
@@ -29,4 +29,10 @@ public class Department {
     public String getDeptNo() {
         return deptNo;
     }
+
+    public String getDeptName(){
+        return deptName;
+    }
+
+
 }

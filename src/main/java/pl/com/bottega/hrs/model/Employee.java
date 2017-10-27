@@ -13,6 +13,8 @@ import java.util.Optional;
 @Table(name = "employees")
 public class Employee {
 
+    private final LocalDate TO_DATE_MAX = LocalDate.of(9999,1,1);
+
     @Id
     @Column(name = "emp_no")
     private Integer empNo;
@@ -94,6 +96,15 @@ public class Employee {
         this.titles = getTitles();
     }
 
+    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, DepartmentAssignment departmentAssignments) {
+        this.empNo = empNo;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.hireDate = LocalDate.now();
+        this.address = address;
+       this.departmentAssignments = getDepartmentAssignments();
+    }
 
 
     public void changeTitle(String title){
@@ -101,13 +112,14 @@ public class Employee {
         if(employeeTitles.isEmpty())
             addNewTitle(title);
         else {
-            employeeTitles.getLast().setToDateTitle(LocalDate.now());
+            employeeTitles.getLast().setToDate(LocalDate.now());
             addNewTitle(title);
         }
+
     }
 
     private void addNewTitle(String title) {
-        titles.add(new Title(new Title.TitleId(getEmpNo()),title, LocalDate.now(), LocalDate.parse("9999-01-01")));
+        titles.add(new Title(getEmpNo(),title, LocalDate.now(), TO_DATE_MAX));
     }
 
 
@@ -139,24 +151,40 @@ public class Employee {
     }
 
     private void addNewDepartment(Department department) {
-        departmentAssignments.add(new DepartmentAssignment(new DepartmentAssignment.DepartmentId(getEmpNo(), getDeptNo()), LocalDate.now(), LocalDate.parse("9999-01-01"), department))
+
+        departmentAssignments.add(new DepartmentAssignment(getEmpNo(),department.getDeptNo(), LocalDate.now(), TO_DATE_MAX));
     }
 
     private void addNewSalary(Integer salary) {
 
-        salaries.add(new Salary(new Salary.SalaryId(getEmpNo(),LocalDate.now()),salary,LocalDate.parse("9999-01-01")));
+        salaries.add(new Salary(new Salary.SalaryId(getEmpNo(),LocalDate.now()),salary,TO_DATE_MAX));
     }
 
     public Optional<String> getCurrentTitle(){
-        LinkedList<Title> employeeTitle = new LinkedList<>(titles);
-        String currentTitle = employeeTitle.getLast().getTitle();
-        return Optional.ofNullable(currentTitle);
+        for (Title title : titles) {
+            if (title.getToDate() == TO_DATE_MAX)
+                return Optional.of(title.getTitle());
+        }
+        return Optional.empty();
     }
+
 
     public Optional<Integer> getCurrentSalary(){
         LinkedList<Salary> employeeSalary = new LinkedList<>(salaries);
         Integer currentSalary = employeeSalary.getLast().getSalary();
         return Optional.ofNullable(currentSalary);
+    }
+
+    public Department getCurrentDepartment(){
+        LinkedList<DepartmentAssignment> departments = new LinkedList<>(departmentAssignments);
+        Department currentDepartment = departments.getLast().getDept();
+        return currentDepartment;
+    }
+
+    public Optional<String> getCurrentDeptName(){
+        LinkedList<DepartmentAssignment> departments = new LinkedList<>(departmentAssignments);
+        String currentDepartment = departments.getLast().getDeptName();
+        return Optional.ofNullable(currentDepartment);
     }
 
 
@@ -199,11 +227,21 @@ public class Employee {
         titles.add(title);
     }
 
+
     public Collection<Title> getTitles() {
         return titles;
     }
 
-    public String getDeptNo() {
-        return Department.getDeptNo();
+
+    public Collection<DepartmentAssignment> getDepartmentAssignments() {
+        return departmentAssignments;
+    }
+
+    public void addDepartmentAssignment(DepartmentAssignment deepAss, Department department) {
+        departmentAssignments.add(deepAss);
+    }
+
+    public void setDepartmentAssignments(Collection<DepartmentAssignment> departmentAssignments) {
+        this.departmentAssignments = departmentAssignments;
     }
 }

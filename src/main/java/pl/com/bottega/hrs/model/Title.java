@@ -13,20 +13,25 @@ public class Title {
 
 
 
-
-
     @Embeddable
     public static class TitleId implements Serializable {
 
         @Column(name = "emp_no",nullable = false, insertable = false, updatable = false)
         private Integer empNo;
 
+        @Column(name = "title")
+        private String title;
+
+        @Column(name = "from_date")
+        private LocalDate fromDate;
 
         public TitleId() {
         }
 
-        public TitleId(Integer empNo) {
+        public TitleId(Integer empNo, String title, LocalDate fromDate) {
             this.empNo = empNo;
+            this.title = title;
+            this.fromDate = fromDate;
         }
 
         @Override
@@ -36,59 +41,56 @@ public class Title {
 
             TitleId titleId = (TitleId) o;
 
-            return empNo.equals(titleId.empNo);
+            if (!empNo.equals(titleId.empNo)) return false;
+            if (!title.equals(titleId.title)) return false;
+            return fromDate.equals(titleId.fromDate);
         }
 
         @Override
         public int hashCode() {
-            return empNo.hashCode();
-        }
-
-        @Override
-        public String toString() {
-            return "TitleId{" +
-                    "empNo=" + empNo +
-                    '}';
+            int result = empNo.hashCode();
+            result = 31 * result + title.hashCode();
+            result = 31 * result + fromDate.hashCode();
+            return result;
         }
     }
 
     @EmbeddedId
     private TitleId titleId;
 
-    @Column(name = "title")
-    private String title;
-
-    @Column(name = "from_date")
-    private LocalDate fromDate;
-
     @Column(name = "to_date")
     private LocalDate toDate;
-
-    public Title(TitleId titleId, String title, LocalDate fromDate, LocalDate toDate){
-        this.titleId = titleId;
-        this.title = title;
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-    }
 
     public Title() {
     }
 
-    public void setToDateTitle(LocalDate newDate) {
-        this.toDate = newDate;
+
+    public Title(Integer empNo, String title, LocalDate fromDate, LocalDate toDate){
+        this.titleId = new TitleId(empNo, title, fromDate);
+        this.toDate = toDate;
     }
+
+
 
     public String getTitle() {
-        return title;
+        return titleId.title;
     }
 
-    @Override
-    public String toString() {
-        return "Title{" +
-                "titleId=" + titleId +
-                ", title='" + title + '\'' +
-                ", fromDate=" + fromDate +
-                ", toDate=" + toDate +
-                '}';
+    public LocalDate getToDate() {
+        return toDate;
     }
+
+    public TitleId getTitleId() {
+        return titleId;
+    }
+
+    public void setTitleId(TitleId titleId) {
+        this.titleId = titleId;
+    }
+
+    public void setToDate(LocalDate toDate) {
+        this.toDate = toDate;
+    }
+
 }
+
