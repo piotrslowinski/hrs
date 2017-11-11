@@ -1,10 +1,14 @@
 package pl.com.bottega.hrs.model;
 
 import javax.persistence.*;
+import java.nio.channels.AsynchronousFileChannel;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Created by user on 14.10.2017.
@@ -13,6 +17,7 @@ import java.util.Optional;
 @Table(name = "employees")
 public class Employee {
 
+    @Transient
     private final LocalDate TO_DATE_MAX = LocalDate.of(9999,1,1);
 
     @Id
@@ -21,6 +26,9 @@ public class Employee {
 
     @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    @Transient
+    private TimeProvider timeProvider;
 
     @Column(name = "hire_date")
     private LocalDate hireDate;
@@ -48,78 +56,23 @@ public class Employee {
     @JoinColumn(name = "emp_no")
     private Collection<Title> titles = new LinkedList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "emp_no")
     private Collection<DepartmentAssignment> departmentAssignments = new LinkedList<>();
-    private String deptNo;
+
+
 
     public Employee(){}
 
-    public Employee (Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address){
+    public Employee (Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, TimeProvider timeProvider){
         this.empNo = empNo;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        this.hireDate = LocalDate.now();
+        this.timeProvider = timeProvider;
+        this.hireDate = timeProvider.today();
         this.address = address;
 
-    }
-
-    public Employee (Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, Salary salaries){
-        this.empNo = empNo;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.hireDate = LocalDate.now();
-        this.address = address;
-        this.salaries = getSalaries();
-    }
-
-    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, Title titles) {
-        this.empNo = empNo;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.hireDate = LocalDate.now();
-        this.address = address;
-        this.titles = getTitles();
-    }
-
-    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, Salary salary, Title titles) {
-        this.empNo = empNo;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.hireDate = LocalDate.now();
-        this.address = address;
-        this.salaries = getSalaries();
-        this.titles = getTitles();
-    }
-
-    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, DepartmentAssignment departmentAssignments) {
-        this.empNo = empNo;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.hireDate = LocalDate.now();
-        this.address = address;
-       this.departmentAssignments = getDepartmentAssignments();
-    }
-
-
-    public void changeTitle(String title){
-        LinkedList<Title> employeeTitles = new LinkedList<>(titles);
-        if(employeeTitles.isEmpty())
-            addNewTitle(title);
-        else {
-            employeeTitles.getLast().setToDate(LocalDate.now());
-            addNewTitle(title);
-        }
-
-    }
-
-    private void addNewTitle(String title) {
-        titles.add(new Title(getEmpNo(),title, LocalDate.now(), TO_DATE_MAX));
     }
 
 
@@ -129,62 +82,30 @@ public class Employee {
         this.birthDate = birthDate;
     }
 
-    public void changeSalary(Integer salary){
-        LinkedList<Salary> employeeSalary = new LinkedList<>(salaries);
-        if(employeeSalary.isEmpty())
-            addNewSalary(salary);
-        else {
-            employeeSalary.getLast().setToDateSalary(LocalDate.now());
-            addNewSalary(salary);
+    public void updateProfile(String firstName, String lastName, LocalDate birthDate, Address address, Gender gender) {
+        updateProfile(firstName, lastName, birthDate);
+        this.address = address;
+        this.gender = gender;
+    }
+
+    public void changeSalary(Integer newSalary) {
+        getCurrentSalary().ifPresent((currentSalary) -> {
+            removeOrTerminateSalary(currentSalary);
+        });
+        addNewSalary(newSalary);
+
+    }
+
+    private void addNewSalary(Integer newSalary) {
+        salaries.add(new Salary(empNo, newSalary, timeProvider));
+    }
+
+    private void removeOrTerminateSalary(Salary currentSalary) {
+        if(currentSalary.startsToday()){
+            salaries.remove(currentSalary);
+        } else {
+            currentSalary.terminate();
         }
-
-    }
-
-    public void changeDepartment(Department department){
-        LinkedList<DepartmentAssignment> departments = new LinkedList<>(departmentAssignments);
-        if (departments.isEmpty())
-            addNewDepartment(department);
-        else {
-            departments.getLast().setToDateDepartment(LocalDate.now());
-            addNewDepartment(department);
-        }
-    }
-
-    private void addNewDepartment(Department department) {
-
-        departmentAssignments.add(new DepartmentAssignment(getEmpNo(),department.getDeptNo(), LocalDate.now(), TO_DATE_MAX));
-    }
-
-    private void addNewSalary(Integer salary) {
-
-        salaries.add(new Salary(new Salary.SalaryId(getEmpNo(),LocalDate.now()),salary,TO_DATE_MAX));
-    }
-
-    public Optional<String> getCurrentTitle(){
-        for (Title title : titles) {
-            if (title.getToDate() == TO_DATE_MAX)
-                return Optional.of(title.getTitle());
-        }
-        return Optional.empty();
-    }
-
-
-    public Optional<Integer> getCurrentSalary(){
-        LinkedList<Salary> employeeSalary = new LinkedList<>(salaries);
-        Integer currentSalary = employeeSalary.getLast().getSalary();
-        return Optional.ofNullable(currentSalary);
-    }
-
-    public Department getCurrentDepartment(){
-        LinkedList<DepartmentAssignment> departments = new LinkedList<>(departmentAssignments);
-        Department currentDepartment = departments.getLast().getDept();
-        return currentDepartment;
-    }
-
-    public Optional<String> getCurrentDeptName(){
-        LinkedList<DepartmentAssignment> departments = new LinkedList<>(departmentAssignments);
-        String currentDepartment = departments.getLast().getDeptName();
-        return Optional.ofNullable(currentDepartment);
     }
 
 
@@ -218,30 +139,87 @@ public class Employee {
                 '}';
     }
 
-    public void addSalary(Salary salary) {
-        salaries.add(salary);
 
+
+
+    public Optional<Salary> getCurrentSalary() {
+        return salaries.stream().filter(Salary::isCurrent).findFirst();
     }
 
-    public void addTitle(Title title) {
-        titles.add(title);
+    public void changeTitle(String titleName) {
+        getCurrentTitle().ifPresent((t) -> {
+            if (t.startsToday())
+                titles.remove(t);
+            else
+                t.terminate();
+        });
+        titles.add(new Title(empNo, titleName, timeProvider));
     }
 
+    public Optional<Title> getCurrentTitle() {
+        return titles.stream().filter(Title::isCurrent).findFirst();
+    }
 
-    public Collection<Title> getTitles() {
+    public Collection<Title> getTitleHistory() {
         return titles;
     }
 
+    public Collection<Department> getCurrentDepartments() {
+        return departmentAssignments.stream().filter(DepartmentAssignment::isCurrent).
+                map(DepartmentAssignment::getDepartment).
+                collect(Collectors.toList());
+    }
 
-    public Collection<DepartmentAssignment> getDepartmentAssignments() {
+    public void assignDepartment(Department department) {
+        if (!isCurrentlyAssignedTo(department))
+            departmentAssignments.add(new DepartmentAssignment(empNo, department, timeProvider));
+    }
+
+    private boolean isCurrentlyAssignedTo(Department department) {
+        return getCurrentDepartments().contains(department);
+    }
+
+    public void unassignDepartment(Department department) {
+        departmentAssignments.stream().filter((assignment) -> assignment.isAssigned(department))
+                .findFirst()
+                .ifPresent(DepartmentAssignment::unassign);
+    }
+
+    public void fire(Employee employee){
+//        employee.getDepartmentsHistory().stream().filter((department) -> department.isCurrent())
+//                .findAny().ifPresent(DepartmentAssignment::unassign);
+
+        Collection<Department> current = employee.getCurrentDepartments();
+        for (Department dept: current){
+            unassignDepartment(dept);
+        }
+        Salary salary = employee.getCurrentSalary().get();
+        removeOrTerminateSalary(salary);
+        Title title = employee.getCurrentTitle().get();
+        title.terminate();
+
+
+    }
+
+    public Collection<DepartmentAssignment> getDepartmentsHistory() {
         return departmentAssignments;
     }
 
-    public void addDepartmentAssignment(DepartmentAssignment deepAss, Department department) {
-        departmentAssignments.add(deepAss);
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDepartmentAssignments(Collection<DepartmentAssignment> departmentAssignments) {
-        this.departmentAssignments = departmentAssignments;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
+
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+
 }

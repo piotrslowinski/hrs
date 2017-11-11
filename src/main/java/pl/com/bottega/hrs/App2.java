@@ -2,7 +2,7 @@ package pl.com.bottega.hrs;
 
 import pl.com.bottega.hrs.model.Address;
 import pl.com.bottega.hrs.model.Employee;
-import pl.com.bottega.hrs.model.Salary;
+import pl.com.bottega.hrs.infrastructure.StandardTimeProvider;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -20,7 +20,7 @@ public class App2 {
 //        Salary salary = new Salary();
         Address address = new Address("al.Warszawska", "Lublin");
         Employee employee = new Employee(500005, "Krzysztof","Jerzyna",
-                LocalDate.parse("1960-08-12"),address);
+                LocalDate.parse("1960-08-12"),address, new StandardTimeProvider());
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(employee);

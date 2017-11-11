@@ -13,13 +13,17 @@ public class Title {
 
 
 
+
     @Embeddable
     public static class TitleId implements Serializable {
 
-        @Column(name = "emp_no",nullable = false, insertable = false, updatable = false)
+        @Column(name = "emp_no")
         private Integer empNo;
 
-        @Column(name = "title")
+        @Transient
+        private TimeProvider timeProvider;
+
+
         private String title;
 
         @Column(name = "from_date")
@@ -28,35 +32,24 @@ public class Title {
         public TitleId() {
         }
 
-        public TitleId(Integer empNo, String title, LocalDate fromDate) {
+        public TitleId(Integer empNo, String title, TimeProvider timeProvider) {
             this.empNo = empNo;
             this.title = title;
-            this.fromDate = fromDate;
+            this.timeProvider = timeProvider;
+            this.fromDate = timeProvider.today();
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof TitleId)) return false;
 
-            TitleId titleId = (TitleId) o;
-
-            if (!empNo.equals(titleId.empNo)) return false;
-            if (!title.equals(titleId.title)) return false;
-            return fromDate.equals(titleId.fromDate);
-        }
-
-        @Override
-        public int hashCode() {
-            int result = empNo.hashCode();
-            result = 31 * result + title.hashCode();
-            result = 31 * result + fromDate.hashCode();
-            return result;
+        public boolean startsToday() {
+            return fromDate.isEqual(timeProvider.today());
         }
     }
 
+    @Transient
+    private TimeProvider timeProvider;
+
     @EmbeddedId
-    private TitleId titleId;
+    private TitleId id;
 
     @Column(name = "to_date")
     private LocalDate toDate;
@@ -65,32 +58,35 @@ public class Title {
     }
 
 
-    public Title(Integer empNo, String title, LocalDate fromDate, LocalDate toDate){
-        this.titleId = new TitleId(empNo, title, fromDate);
-        this.toDate = toDate;
+    public Title(Integer empNo, String titleName, TimeProvider timeProvider){
+        this.id = new TitleId(empNo, titleName, timeProvider);
+        this.timeProvider = timeProvider;
+        toDate = timeProvider.MAX_DATE;
     }
 
 
+    public void terminate() {
+        toDate = timeProvider.today();
+    }
 
-    public String getTitle() {
-        return titleId.title;
+    public boolean startsToday() {
+        return id.startsToday();
+    }
+
+    public String getName() {
+        return id.title;
+    }
+
+    public LocalDate getFromDate() {
+        return id.fromDate;
     }
 
     public LocalDate getToDate() {
         return toDate;
     }
 
-    public TitleId getTitleId() {
-        return titleId;
+    public boolean isCurrent() {
+        return toDate.isAfter(timeProvider.today());
     }
-
-    public void setTitleId(TitleId titleId) {
-        this.titleId = titleId;
-    }
-
-    public void setToDate(LocalDate toDate) {
-        this.toDate = toDate;
-    }
-
 }
 

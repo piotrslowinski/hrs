@@ -14,89 +14,79 @@ import java.time.LocalDate;
 public class Salary {
 
 
-    private String deptName;
 
-    public String getDeptName() {
-        return deptName;
-    }
 
     @Embeddable
     public static class SalaryId implements Serializable{
 
-        @Column(name = "emp_no", nullable = false, insertable = false, updatable = false)
+        @Column(name = "emp_no")
         private Integer empNo ;
 
 
         @Column(name = "from_date")
         private LocalDate fromDate;
 
+        @Transient
+        private TimeProvider timeProvider;
+
         public SalaryId() {
         }
 
-        public SalaryId(Integer empNo, LocalDate fromDate){
+        public SalaryId(Integer empNo, TimeProvider timeProvider){
             this.empNo = empNo;
-            this.fromDate = fromDate;
+            this.timeProvider = timeProvider;
+            this.fromDate = timeProvider.today();
         }
 
-        @Override
-        public String toString() {
-            return "SalaryId{" +
-                    "empNo=" + empNo +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof SalaryId)) return false;
-
-            SalaryId salaryId = (SalaryId) o;
-
-            return empNo.equals(salaryId.empNo);
-        }
-
-        @Override
-        public int hashCode() {
-            return empNo.hashCode();
+        public boolean startsToday() {
+            return fromDate.isEqual(timeProvider.today());
         }
     }
 
     @EmbeddedId
-    private SalaryId salaryId;
+    private SalaryId id;
 
-    @Column(name = "salary")
     private Integer salary;
+
+    @Transient
+    private TimeProvider timeProvider;
 
     @Column(name = "to_date")
     private LocalDate toDate;
 
 
-    public Salary(SalaryId salaryId, Integer salary, LocalDate toDate){
-        this.salaryId = salaryId;
+    public Salary(Integer empNo, Integer salary, TimeProvider timeProvider){
+        id = new SalaryId(empNo, timeProvider);
         this.salary = salary;
-        this.toDate = toDate;
+        this.timeProvider = timeProvider;
+        toDate = TimeProvider.MAX_DATE;
     }
 
     public Salary(){
     }
 
-    public Integer getSalary() {
+    public LocalDate getFromDate() {
+        return id.fromDate;
+    }
+
+    public LocalDate getToDate() {
+        return toDate;
+    }
+
+    public boolean isCurrent() {
+        return toDate.isAfter(timeProvider.today());
+    }
+
+    public void terminate() {
+        toDate = timeProvider.today();
+    }
+
+    public boolean startsToday() {
+        return id.startsToday();
+    }
+
+    public int getValue() {
         return salary;
-    }
-
-    public void setToDateSalary(LocalDate newDate){
-        this.toDate = newDate;
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "Salary{" +
-                "salaryId=" + salaryId +
-                ", salary=" + salary +
-                ", toDate=" + toDate +
-                '}';
     }
 
 

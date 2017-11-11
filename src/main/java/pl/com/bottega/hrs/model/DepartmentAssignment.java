@@ -5,40 +5,49 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
- * Created by user on 25.10.2017.
+ * Created by user on 31.10.2017.
  */
 @Entity
-@Table(name = "dept_no")
+@Table(name = "dept_emp")
 public class DepartmentAssignment {
 
 
+    public Department getDepartment() {
+        return id.department;
+    }
 
+    public boolean isAssigned(Department department) {
+        return isCurrent() && department.equals(id.department);
+    }
 
+    public void unassign() {
+        toDate = timeProvider.today();
+    }
 
     @Embeddable
-    public static class DepartmentAssignmentId implements Serializable{
+    public static class DepartmentAssignmentId implements Serializable {
 
-        @Column(name = "emp_no", nullable = false, insertable = false, updatable = false)
-        private Integer empNo ;
+        @Column(name = "emp_no")
+        private Integer empNo;
 
-        @Column(name = "dept_no", columnDefinition = "char(4)", insertable = false, updatable = false)
-        private String deptNo;
-
-        @OneToOne
-        @PrimaryKeyJoinColumn(name = "dept_no", referencedColumnName = "dept_no")
-        Department department;
-
-        public DepartmentAssignmentId(Integer empNo, String deptNo) {
-            this.empNo = empNo;
-            this.deptNo = deptNo;
-        }
+        @ManyToOne
+        @JoinColumn(name = "dept_no")
+        private Department department;
 
         public DepartmentAssignmentId() {
+        }
+
+        public DepartmentAssignmentId(Integer empNo, Department department) {
+            this.empNo = empNo;
+            this.department = department;
         }
     }
 
     @EmbeddedId
-    private DepartmentAssignmentId departmentAssignmentId;
+    private DepartmentAssignmentId id;
+
+    @Transient
+    private TimeProvider timeProvider;
 
     @Column(name = "from_date")
     private LocalDate fromDate;
@@ -46,62 +55,28 @@ public class DepartmentAssignment {
     @Column(name = "to_date")
     private LocalDate toDate;
 
-
-
-
-    public DepartmentAssignment(Integer empNo, String deptNo, LocalDate fromDate, LocalDate toDate) {
-        this.departmentAssignmentId = new DepartmentAssignmentId(empNo, deptNo);
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-    }
-
     public DepartmentAssignment() {
     }
 
-    public void setToDateDepartment(LocalDate newDate) {
-        this.toDate = newDate;
+    public DepartmentAssignment(Integer empNo, Department department, TimeProvider timeProvider) {
+        this.id = new DepartmentAssignmentId(empNo, department);
+        this.timeProvider = timeProvider;
+        this.fromDate = timeProvider.today();
+        this.toDate = timeProvider.MAX_DATE;
     }
 
-    public DepartmentAssignmentId getDepartmentAssignmentId() {
-        return departmentAssignmentId;
-    }
-    public Department getDept(){
-        return departmentAssignmentId.department;
-    }
-
-    public String getDeptName(){
-        return getDept().getDeptName();
-    }
-
-
-    public void setDepartmentAssignmentId(DepartmentAssignmentId departmentAssignmentId) {
-        this.departmentAssignmentId = departmentAssignmentId;
-    }
 
     public LocalDate getFromDate() {
         return fromDate;
     }
 
-    public void setFromDate(LocalDate fromDate) {
-        this.fromDate = fromDate;
-    }
 
     public LocalDate getToDate() {
         return toDate;
     }
 
-    public void setToDate(LocalDate toDate) {
-        this.toDate = toDate;
+    public boolean isCurrent() {
+        return toDate.isAfter(timeProvider.today());
     }
-
-    public Integer getEmpNo(){
-        return departmentAssignmentId.empNo;
-    }
-
-    public String getDeptNo(){
-        return departmentAssignmentId.deptNo;
-    }
-
-
-
 }
+

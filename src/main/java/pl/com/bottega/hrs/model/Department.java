@@ -35,4 +35,7 @@ public class Department {
     }
 
 
+    public String getNumber() {
+        return deptNo;
+    }
 }
