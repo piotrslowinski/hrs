@@ -6,6 +6,7 @@ import pl.com.bottega.hrs.model.Department;
 import pl.com.bottega.hrs.model.Employee;
 import pl.com.bottega.hrs.model.TimeProvider;
 import pl.com.bottega.hrs.model.commands.AddEmployeeCommand;
+import pl.com.bottega.hrs.model.commands.Command;
 import pl.com.bottega.hrs.model.repositories.DepartmentRepository;
 import pl.com.bottega.hrs.model.repositories.EmployeeRepository;
 
@@ -13,23 +14,24 @@ import pl.com.bottega.hrs.model.repositories.EmployeeRepository;
  * Created by user on 07.11.2017.
  */
 @Component
-public class AddEmployeeHandler {
+public class AddEmployeeHandler implements Handler<AddEmployeeCommand> {
 
     private EmployeeRepository repository;
     private DepartmentRepository departmentRepository;
     private TimeProvider timeProvider;
 
-    public AddEmployeeHandler(EmployeeRepository employeeRepository,
+    public AddEmployeeHandler(EmployeeRepository repository,
                               DepartmentRepository departmentRepository,
                               TimeProvider timeProvider) {
-        this.repository = employeeRepository;
+        this.repository = repository;
         this.departmentRepository = departmentRepository;
         this.timeProvider = timeProvider;
     }
 
     @Transactional
-    public void handle(AddEmployeeCommand cmd){
-        Employee employee = new Employee(repository.generateNumber(),
+    public void handle(AddEmployeeCommand cmd) {
+        Employee employee = new Employee(
+                repository.generateNumber(),
                 cmd.getFirstName(),
                 cmd.getLastName(),
                 cmd.getBirthDate(),
@@ -42,4 +44,11 @@ public class AddEmployeeHandler {
         employee.assignDepartment(department);
         repository.save(employee);
     }
+
+    @Override
+    public Class<? extends Command> getSupportedCommandClass() {
+        return AddEmployeeCommand.class;
+    }
+
+
 }

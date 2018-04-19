@@ -3,10 +3,9 @@ package pl.com.bottega.hrs.model.commands;
 /**
  * Created by user on 07.11.2017.
  */
-public class ChangeEmployeeTitleCommand {
+public class ChangeEmployeeTitleCommand implements Command {
 
     private Integer empNo;
-
     private String title;
 
     public Integer getEmpNo() {
@@ -23,5 +22,10 @@ public class ChangeEmployeeTitleCommand {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void validate(ValidationErrors errors) {
+        validatePresence(errors, "empNo", empNo);
+        validatePresence(errors, "title", title);
     }
 }

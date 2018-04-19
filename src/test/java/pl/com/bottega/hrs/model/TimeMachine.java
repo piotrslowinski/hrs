@@ -15,7 +15,7 @@ public class TimeMachine implements TimeProvider {
         return currentClock;
     }
 
-    public void travel(Duration duration){
+    public void travel(Duration duration) {
         currentClock = Clock.offset(currentClock, duration);
     }
 

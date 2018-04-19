@@ -1,16 +1,19 @@
 package pl.com.bottega.hrs.application;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pl.com.bottega.hrs.model.Department;
 import pl.com.bottega.hrs.model.commands.AddDepartmentCommand;
+import pl.com.bottega.hrs.model.commands.Command;
 import pl.com.bottega.hrs.model.repositories.DepartmentRepository;
 
 /**
  * Created by user on 07.11.2017.
  */
 @Component
-public class AddDepartmentHandler {
+public class AddDepartmentHandler implements Handler<AddDepartmentCommand> {
+
 
     private DepartmentRepository departmentRepository;
 
@@ -20,8 +23,13 @@ public class AddDepartmentHandler {
 
 
     @Transactional
-    public void handle(AddDepartmentCommand command){
+    public void handle(AddDepartmentCommand command) {
         Department department = new Department(command.getNumber(), command.getName());
         departmentRepository.save(department);
+    }
+
+    @Override
+    public Class<? extends Command> getSupportedCommandClass() {
+        return AddDepartmentCommand.class;
     }
 }

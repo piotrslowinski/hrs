@@ -16,13 +16,14 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * Created by user on 10.11.2017.
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class FireEmployeeTest {
+public class FireEmployeeTest extends AcceptanceTest {
 
     @Autowired
     private AddEmployeeHandler addEmployeeHandler;
@@ -37,33 +38,42 @@ public class FireEmployeeTest {
     private FireEmployeeHandler fireEmployeeHandler;
 
     @Test
-    public void shouldFireCreatedEmployee(){
-        // given
-        AddDepartmentCommand addDepartmentCommand = new AddDepartmentCommand();
-        addDepartmentCommand.setName("Marketing");
-        addDepartmentCommand.setNumber("d1");
-        addDepartmentHandler.handle(addDepartmentCommand);
-
-        AddEmployeeCommand addEmployeeCommand = new AddEmployeeCommand();
-        addEmployeeCommand.setFirstName("Janek");
-        addEmployeeCommand.setLastName("Nowak");
-        addEmployeeCommand.setAddress(new Address("test", "test"));
-        addEmployeeCommand.setBirthDate(LocalDate.parse("1990-01-01"));
-        addEmployeeCommand.setDeptNo("d1");
-        addEmployeeCommand.setGender(Gender.M);
-        addEmployeeCommand.setSalary(50000);
-        addEmployeeCommand.setTitle("Junior Developer");
-        addEmployeeHandler.handle(addEmployeeCommand);
+    public void shouldFireCreatedEmployee() {
+        //given
+        String deptNo = "d001";
+        AddDepartmentCommand deptCmd = new AddDepartmentCommand();
+        deptCmd.setNumber(deptNo);
+        deptCmd.setName("Maintentance");
+        addDepartmentHandler.handle(deptCmd);
 
         //when
-        FireEmployeeCommand fireEmployeeCommand = new FireEmployeeCommand();
-        fireEmployeeCommand.getEmpNo();
-        fireEmployeeHandler.handle(fireEmployeeCommand);
+        AddEmployeeCommand cmd = new AddEmployeeCommand();
+        cmd.setFirstName("Janek");
+        cmd.setLastName("Nowak");
+        cmd.setAddress(new Address("Krańcowa", "Lublin"));
+        cmd.setBirthDate(LocalDate.parse("1980-01-01"));
+        cmd.setGender(Gender.M);
+        cmd.setSalary(500000);
+        cmd.setTitle("Manager");
+        cmd.setDeptNo(deptNo);
+        addEmployeeHandler.handle(cmd);
 
-        //then
+        FireEmployeeCommand fireCmd = new FireEmployeeCommand();
+        fireCmd.setEmpNo(1);
+        fireEmployeeHandler.handle(fireCmd);
+
         DetailedEmployeeDto employeeDto = employeeFinder.getEmployeeDetails(1);
-        SalaryDto salaryDto = employeeFinder.getSalaryInfo(1);
-        assertEquals(LocalDate.now(), salaryDto.getToDate());
+        assertEquals("Janek", employeeDto.getFirstName());
+        assertEquals("Nowak", employeeDto.getLastName());
+        assertEquals(new Address("Krańcowa", "Lublin"), employeeDto.getAddress());
+        assertEquals(LocalDate.parse("1980-01-01"), employeeDto.getBirthDate());
+        assertEquals(LocalDate.now(), employeeDto.getHireDate());
+        assertEquals(Gender.M, employeeDto.getGender());
+
+        assertEquals(0, employeeDto.getDepartmentNumbers().size());
+        assertFalse(employeeDto.getSalary().isPresent());
+        assertFalse(employeeDto.getTitle().isPresent());
+
 
     }
 }

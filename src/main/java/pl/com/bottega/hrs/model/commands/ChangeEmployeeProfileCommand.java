@@ -8,7 +8,7 @@ import java.time.LocalDate;
 /**
  * Created by user on 07.11.2017.
  */
-public class ChangeEmployeeProfileCommand {
+public class ChangeEmployeeProfileCommand implements Command {
 
     private String firstName, lastName;
 
@@ -66,5 +66,19 @@ public class ChangeEmployeeProfileCommand {
 
     public void setEmpNo(Integer empNo) {
         this.empNo = empNo;
+    }
+
+    public void validate(ValidationErrors errors) {
+        validatePresence(errors, "firstName", firstName);
+        validatePresence(errors, "lastName", lastName);
+        validatePresence(errors, "birthDate", birthDate);
+        validatePresence(errors, "address.street", address.getStreet());
+        validatePresence(errors, "address.city", address.getCity());
+        validatePresence(errors, "gender", gender);
+        validatePresence(errors, "empNo", empNo);
+
+        if (birthDate != null && birthDate.isAfter(LocalDate.now())) {
+            errors.add("birthDate", "mast be in the past");
+        }
     }
 }

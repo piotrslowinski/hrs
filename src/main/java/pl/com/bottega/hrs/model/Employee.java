@@ -1,8 +1,9 @@
 package pl.com.bottega.hrs.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import pl.com.bottega.hrs.infrastructure.StandardTimeProvider;
+
 import javax.persistence.*;
-import java.nio.channels.AsynchronousFileChannel;
-import java.sql.Time;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -17,8 +18,9 @@ import java.util.stream.Collectors;
 @Table(name = "employees")
 public class Employee {
 
+
     @Transient
-    private final LocalDate TO_DATE_MAX = LocalDate.of(9999,1,1);
+    private final LocalDate TO_DATE_MAX = LocalDate.of(9999, 1, 1);
 
     @Id
     @Column(name = "emp_no")
@@ -28,6 +30,7 @@ public class Employee {
     private LocalDate birthDate;
 
     @Transient
+    @Autowired
     private TimeProvider timeProvider;
 
     @Column(name = "hire_date")
@@ -41,30 +44,32 @@ public class Employee {
     private String lastName;
 
     @Enumerated(value = EnumType.STRING)
-    @Column(columnDefinition = "enum('M','F')")
-    private Gender gender;
+    @Column(columnDefinition = "enum('M', 'F')")
+    private Gender gender = Gender.M;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "emp_no")
     private Collection<Salary> salaries = new LinkedList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    @JoinColumn(name = "emp_no")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "id.employee")
     private Collection<Title> titles = new LinkedList<>();
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "emp_no")
     private Collection<DepartmentAssignment> departmentAssignments = new LinkedList<>();
 
+    @Version
+    private int version;
 
 
-    public Employee(){}
+    public Employee() {
+    }
 
-    public Employee (Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, TimeProvider timeProvider){
+    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, Address address, TimeProvider timeProvider) {
         this.empNo = empNo;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -89,23 +94,23 @@ public class Employee {
     }
 
     public void changeSalary(Integer newSalary) {
-        getCurrentSalary().ifPresent((currentSalary) -> {
-            removeOrTerminateSalary(currentSalary);
-        });
-        addNewSalary(newSalary);
+        Optional<Salary> current = getCurrentSalary();
+        if (current.isPresent()) {
+            Salary currentSalary = current.get();
+            if (currentSalary.startsToday())
+                currentSalary.update(newSalary);
+            else {
+                currentSalary.terminate();
+                addNewSalary(newSalary);
+            }
+
+        } else
+            addNewSalary(newSalary);
 
     }
 
     private void addNewSalary(Integer newSalary) {
         salaries.add(new Salary(empNo, newSalary, timeProvider));
-    }
-
-    private void removeOrTerminateSalary(Salary currentSalary) {
-        if(currentSalary.startsToday()){
-            salaries.remove(currentSalary);
-        } else {
-            currentSalary.terminate();
-        }
     }
 
 
@@ -140,8 +145,6 @@ public class Employee {
     }
 
 
-
-
     public Optional<Salary> getCurrentSalary() {
         return salaries.stream().filter(Salary::isCurrent).findFirst();
     }
@@ -153,8 +156,9 @@ public class Employee {
             else
                 t.terminate();
         });
-        titles.add(new Title(empNo, titleName, timeProvider));
+        titles.add(new Title(this, titleName, timeProvider));
     }
+
 
     public Optional<Title> getCurrentTitle() {
         return titles.stream().filter(Title::isCurrent).findFirst();
@@ -185,21 +189,33 @@ public class Employee {
                 .ifPresent(DepartmentAssignment::unassign);
     }
 
-    public void fire(Employee employee){
-//        employee.getDepartmentsHistory().stream().filter((department) -> department.isCurrent())
-//                .findAny().ifPresent(DepartmentAssignment::unassign);
 
-        Collection<Department> current = employee.getCurrentDepartments();
-        for (Department dept: current){
-            unassignDepartment(dept);
-        }
-        Salary salary = employee.getCurrentSalary().get();
-        removeOrTerminateSalary(salary);
-        Title title = employee.getCurrentTitle().get();
-        title.terminate();
-
-
+    public void fire() {
+        clearDepartmentAssignments();
+        clearTitle();
+        clearSalary();
     }
+
+    private void clearSalary() {
+        Optional<Salary> currentSalary = salaries.stream().filter(Salary::isCurrent).findFirst();
+        if (currentSalary.isPresent())
+            currentSalary.get().terminate();
+    }
+
+    private void clearTitle() {
+        Optional<Title> currentTitle = titles.stream().filter(Title::isCurrent).findFirst();
+        if (currentTitle.isPresent())
+            currentTitle.get().terminate();
+    }
+
+    private void clearDepartmentAssignments() {
+        List<Department> currentDepartments = departmentAssignments.stream().filter(DepartmentAssignment::isCurrent).
+                map(DepartmentAssignment::getDepartment).
+                collect(Collectors.toList());
+        for (Department dept : currentDepartments)
+            unassignDepartment(dept);
+    }
+
 
     public Collection<DepartmentAssignment> getDepartmentsHistory() {
         return departmentAssignments;

@@ -15,12 +15,12 @@ import java.time.LocalDate;
 public class App2 {
     public static void main(String[] args) {
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory( "HRS" );
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("HRS");
 
 //        Salary salary = new Salary();
         Address address = new Address("al.Warszawska", "Lublin");
-        Employee employee = new Employee(500005, "Krzysztof","Jerzyna",
-                LocalDate.parse("1960-08-12"),address, new StandardTimeProvider());
+        Employee employee = new Employee(500005, "Krzysztof", "Jerzyna",
+                LocalDate.parse("1960-08-12"), address, new StandardTimeProvider());
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(employee);

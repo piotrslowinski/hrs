@@ -24,19 +24,19 @@ public class JPQLEmployeeFinder implements EmployeeFinder {
                 "FROM Employee e ";
         String whereJpql = " 1 = 1 ";
 
-        if(criteria.getLastNameQuery() != null) {
+        if (criteria.getLastNameQuery() != null) {
             whereJpql += "AND e.lastName LIKE :lastName ";
         }
 
-        if(criteria.getFirstNameQuery() != null) {
+        if (criteria.getFirstNameQuery() != null) {
             whereJpql += " AND e.firstName LIKE :firstName ";
         }
 
-        Query query = entityManager.createQuery(jpql + "WHERE" +  whereJpql);
-        if(criteria.getLastNameQuery() != null) {
+        Query query = entityManager.createQuery(jpql + "WHERE" + whereJpql);
+        if (criteria.getLastNameQuery() != null) {
             query.setParameter("lastName", criteria.getLastNameQuery() + "%");
         }
-        if(criteria.getFirstNameQuery() != null) {
+        if (criteria.getFirstNameQuery() != null) {
             query.setParameter("firstName", criteria.getFirstNameQuery() + "%");
         }
         results.setResults(query.getResultList());
@@ -48,8 +48,4 @@ public class JPQLEmployeeFinder implements EmployeeFinder {
         return null;
     }
 
-    @Override
-    public SalaryDto getSalaryInfo(Integer empNo) {
-        return null;
-    }
 }

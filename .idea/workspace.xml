@@ -2,84 +2,122 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="034b9d60-0333-426b-bd1d-c236abd531d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/Hrs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddDepartmentHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddEmployeeHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/BasicEmployeeDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeSalaryHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DetailedEmployeeDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeFinder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeSearchCriteria.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeSearchResults.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/FireEmployeeHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/TitleDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UnassignDepartmentHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/CSVDepartmentRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HrsConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPADepartmentRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPAEmployeeRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/NoSuchEntityException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/TimeProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/DepartmentRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/EmployeeRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/InfrastructureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App4.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/EntityManagerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/App4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/hrs-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.com.bottega.hrs.AppTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.com.bottega.hrs.AppTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/EntityManagerTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/App2.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/App2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Department.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Department.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment$DepartmentAssignmentId.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment$DepartmentAssignmentId.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Employee.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary$SalaryId.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary$SalaryId.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title$TitleId.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title$TitleId.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hrs.iml" afterPath="$PROJECT_DIR$/hrs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App2.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/CommandGateway.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/Handler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/LoginHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/RegisterUserHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UpdateUserProfileHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/CurrentUser.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/LoginCommand.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/RegisterUserCommand.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/Role.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/SecurityException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/UpdateUserProfileCommand.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/User.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/UserDto.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/UserRepository.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HibernateConfiguration.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/InjectingInterceptor.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPAUserRepository.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/ProfilingAspect.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/Secured.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/SecurityAspect.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/Command.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/CommandInvalidException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ValidationErrors.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/events/SalaryChangedEvent.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/listeners/SalaryChangedNotifier.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/EmployeesController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/ErrorHandlers.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/UsersController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/AcceptanceTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/ChangeSalaryTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/ChangeTitleTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/DepartmentAssignUnassignTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/EditProfileTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/RegisterNewUserTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/application/users/UserTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/hrs.iml" afterPath="$PROJECT_DIR$/hrs.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App2.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App2.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App3.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App3.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddDepartmentHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddDepartmentHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddEmployeeHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddEmployeeHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeSalaryHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeSalaryHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeFinder.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeFinder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/FireEmployeeHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/FireEmployeeHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UnassignDepartmentHandler.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UnassignDepartmentHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HrsConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HrsConfiguration.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Address.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Address.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java" afterPath="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/AddDepartmentHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/AddDepartmentHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/AddEmployeeHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/AddEmployeeHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/ChangeSalaryHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/ChangeSalaryHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/EmployeeFinder.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/EmployeeFinder.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/FireEmployeeHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/FireEmployeeHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/UnassignDepartmentHandler.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/application/UnassignDepartmentHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/HrsConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/HrsConfiguration.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Address.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Address.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Department.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Department.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment$DepartmentAssignmentId.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment$DepartmentAssignmentId.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/DepartmentAssignment.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Employee.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Employee.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary$SalaryId.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary$SalaryId.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Salary.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/TimeProvider.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/TimeProvider.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title$TitleId.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title$TitleId.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/Title.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.class" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/application.properties" afterPath="$PROJECT_DIR$/target/test-classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/acceptance/FireEmployeeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/acceptance/FireEmployeeTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/model/EmployeeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/pl/com/bottega/hrs/model/EmployeeTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,116 +136,117 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="hrs-home" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FireEmployeeCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java">
+      <file leaf-file-name="DepartmentAssignUnassignTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/DepartmentAssignUnassignTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="170">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FireEmployeeHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/FireEmployeeHandler.java">
+      <file leaf-file-name="EditProfileTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/EditProfileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FireEmployeeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterNewUserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/RegisterNewUserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/application/users/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeFinderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#6604#6605#0" expanded="true" />
+                <element signature="e#6648#6649#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TitleDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/TitleDto.java">
+      <file leaf-file-name="EntityManagerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-              <folding>
-                <element signature="e#477#478#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DetailedEmployeeDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DetailedEmployeeDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-729">
-              <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+            <state relative-caret-position="255">
+              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddEmployeeHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddEmployeeHandler.java">
+      <file leaf-file-name="InfrastructureTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/InfrastructureTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+            <state relative-caret-position="221">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepartmentRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/DepartmentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeProvider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/TimeProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StandardTimeProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeSalaryHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeSalaryHandler.java">
+      <file leaf-file-name="EmployeeTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding />
+              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding>
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#2680#2681#0" expanded="true" />
+                <element signature="e#2747#2748#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java">
+      <file leaf-file-name="TimeMachine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="408">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -218,12 +257,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pattern</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -236,57 +281,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeSearchCriteria.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeSearchResults.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/DepartmentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/EmployeeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/TitleDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/LoginHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/Secured.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/ProfilingAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeFinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/SecurityException.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/Hrs.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/CSVDepartmentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/NoSuchEntityException.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HrsConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/events/SalaryChangedEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/ErrorHandlers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/CurrentUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/RegisterUserCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/UpdateUserProfileCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddDepartmentHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddEmployeeHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/BasicEmployeeDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeSalaryHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/CommandGateway.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UnassignDepartmentHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPAEmployeeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPADepartmentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DetailedEmployeeDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentDto.java" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/FireEmployeeHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeFinder.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/RegisterUserHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UnassignDepartmentHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UpdateUserProfileHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HrsConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPAUserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/TimeProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/SecurityAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/listeners/SalaryChangedNotifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/EmployeesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App3.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/EditProfileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/application/users/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java" />
       </list>
     </option>
   </component>
@@ -345,9 +390,9 @@
       </PATH>
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="1378" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -366,328 +411,317 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infrastructure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="acceptance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repositories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infrastructure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs-home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hrs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="acceptance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrs-home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrs-home" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bottega" type="462c0819:PsiDirectoryNode" />
+              <item name="hrs" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -703,9 +737,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="SearchEverywhereHistoryKey" value="getEmployee&#9;PSI&#9;JAVA://pl.com.bottega.hrs.application.EmployeeFinder#getEmployeeDetails&#10;getEmployeeDetails&#9;PSI&#9;JAVA://pl.com.bottega.hrs.application.EmployeeFinder#getEmployeeDetails" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="pl.com.bottega.hrs.application.users" />
       <recent name="pl.com.bottega.hrs.infrastructure" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -724,8 +760,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FireEmployeeTest.shouldFireCreatedEmployee">
-    <configuration default="false" name="EmployeeFinderTest.shouldSearchByHistoricalTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Hrs">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="Hrs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.com.bottega.hrs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.Hrs" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hrs" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="EmployeeFinderTest.shouldFindByLastNameQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="pl.com.bottega.hrs.infrastructure.*" />
@@ -737,7 +813,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.infrastructure" />
       <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.infrastructure.EmployeeFinderTest" />
-      <option name="METHOD_NAME" value="shouldSearchByHistoricalTitle" />
+      <option name="METHOD_NAME" value="shouldFindByLastNameQuery" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -749,21 +825,20 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="EmployeeTest.shouldFireEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeFinderTest.shouldSearchByHireDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="pl.com.bottega.hrs.model.*" />
+          <option name="PATTERN" value="pl.com.bottega.hrs.infrastructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="hrs" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.model" />
-      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.model.EmployeeTest" />
-      <option name="METHOD_NAME" value="shouldFireEmployee" />
+      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.infrastructure" />
+      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.infrastructure.EmployeeFinderTest" />
+      <option name="METHOD_NAME" value="shouldSearchByHireDate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -775,20 +850,64 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="EmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeFinderTest.shouldSearchByTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="pl.com.bottega.hrs.model.*" />
+          <option name="PATTERN" value="pl.com.bottega.hrs.infrastructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="hrs" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.model" />
-      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.model.EmployeeTest" />
+      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.infrastructure" />
+      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.infrastructure.EmployeeFinderTest" />
+      <option name="METHOD_NAME" value="shouldSearchByTitle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="EntityManagerTest.tracksChangesToEntities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.com.bottega.hrs.infrastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="hrs" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.infrastructure" />
+      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.infrastructure.EntityManagerTest" />
+      <option name="METHOD_NAME" value="tracksChangesToEntities" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -801,66 +920,46 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="FireEmployeeTest.shouldFireCreatedEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="pl.com.bottega.hrs.acceptance.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="hrs" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.acceptance" />
-      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.acceptance.FireEmployeeTest" />
-      <option name="METHOD_NAME" value="shouldFireCreatedEmployee" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FireEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="pl.com.bottega.hrs.acceptance.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="hrs" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.com.bottega.hrs.acceptance" />
-      <option name="MAIN_CLASS_NAME" value="pl.com.bottega.hrs.acceptance.FireEmployeeTest" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-      <patterns />
-      <method />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -915,29 +1014,6 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -1095,27 +1171,6 @@
       <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
@@ -1200,46 +1255,10 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -1265,19 +1284,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldSearchByHistoricalTitle" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeTest.shouldFireEmployee" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FireEmployeeTest.shouldFireCreatedEmployee" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FireEmployeeTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EntityManagerTest.tracksChangesToEntities" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldFindByLastNameQuery" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldSearchByHireDate" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldSearchByTitle" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Hrs" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FireEmployeeTest.shouldFireCreatedEmployee" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FireEmployeeTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeTest.shouldFireEmployee" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldSearchByHistoricalTitle" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Hrs" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldSearchByHireDate" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldSearchByTitle" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeFinderTest.shouldFindByLastNameQuery" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EntityManagerTest.tracksChangesToEntities" />
       </list>
     </recent_temporary>
   </component>
@@ -1303,44 +1322,64 @@
       <workItem from="1509864928807" duration="2403000" />
       <workItem from="1509872462001" duration="46000" />
       <workItem from="1509959681826" duration="28199000" />
-      <workItem from="1510214008783" duration="21550000" />
+      <workItem from="1510214008783" duration="22894000" />
+      <workItem from="1510573946499" duration="20321000" />
+      <workItem from="1510755861708" duration="224000" />
+      <workItem from="1510996958911" duration="1144000" />
+      <workItem from="1510999026041" duration="9000" />
+      <workItem from="1511171669851" duration="8784000" />
+      <workItem from="1511698108418" duration="8957000" />
+      <workItem from="1511864007742" duration="8093000" />
+      <workItem from="1512820432511" duration="1002000" />
+      <workItem from="1512984189682" duration="13349000" />
+      <workItem from="1513159735303" duration="4309000" />
+      <workItem from="1513324749171" duration="201000" />
+      <workItem from="1513325100215" duration="20936000" />
     </task>
+    <task id="LOCAL-00001" summary="readme edit">
+      <created>1522227786706</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522227786706</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeTest - 2017.11.10 at 10h 20m 07s.xml">
-      <configuration name="EmployeeTest" configurationId="JUnit" />
+    <history-entry file="EmployeeFinderTest_shouldFindByLastNameQuery - 2017.12.15 at 12h 59m 03s.xml">
+      <configuration name="EmployeeFinderTest.shouldFindByLastNameQuery" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_shouldFireEmployee - 2017.11.09 at 12h 05m 53s.xml">
-      <configuration name="EmployeeTest.shouldFireEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeFinderTest_shouldSearchByHireDate - 2017.12.15 at 12h 55m 47s.xml">
+      <configuration name="EmployeeFinderTest.shouldSearchByHireDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_shouldFireEmployee - 2017.11.09 at 13h 18m 34s.xml">
-      <configuration name="EmployeeTest.shouldFireEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeFinderTest_shouldSearchByHireDate - 2018.04.11 at 17h 48m 22s.xml">
+      <configuration name="EmployeeFinderTest.shouldSearchByHireDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_shouldFireEmployee - 2017.11.09 at 13h 23m 37s.xml">
-      <configuration name="EmployeeTest.shouldFireEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeFinderTest_shouldSearchByTitle - 2017.12.15 at 18h 12m 26s.xml">
+      <configuration name="EmployeeFinderTest.shouldSearchByTitle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_shouldFireEmployee - 2017.11.09 at 13h 23m 47s.xml">
-      <configuration name="EmployeeTest.shouldFireEmployee" configurationId="JUnit" />
+    <history-entry file="EntityManagerTest_tracksChangesToEntities - 2017.12.15 at 09h 32m 47s.xml">
+      <configuration name="EntityManagerTest.tracksChangesToEntities" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_shouldFireEmployee - 2017.11.09 at 13h 25m 41s.xml">
-      <configuration name="EmployeeTest.shouldFireEmployee" configurationId="JUnit" />
+    <history-entry file="pl_com_bottega_hrs_acceptance_in_hrs - 2017.11.20 at 12h 19m 35s.xml">
+      <configuration name="pl.com.bottega.hrs.acceptance in hrs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_shouldFireEmployee - 2017.11.10 at 10h 19m 20s.xml">
-      <configuration name="EmployeeTest.shouldFireEmployee" configurationId="JUnit" />
+    <history-entry file="pl_com_bottega_hrs_acceptance_in_hrs - 2017.11.20 at 12h 29m 02s.xml">
+      <configuration name="pl.com.bottega.hrs.acceptance in hrs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FireEmployeeTest - 2017.11.10 at 11h 50m 25s.xml">
-      <configuration name="FireEmployeeTest" configurationId="JUnit" />
+    <history-entry file="pl_com_bottega_hrs_acceptance_in_hrs - 2017.12.15 at 09h 00m 41s.xml">
+      <configuration name="pl.com.bottega.hrs.acceptance in hrs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FireEmployeeTest_shouldFireCreatedEmployee - 2017.11.11 at 08h 50m 21s.xml">
-      <configuration name="FireEmployeeTest.shouldFireCreatedEmployee" configurationId="JUnit" />
+    <history-entry file="pl_com_bottega_hrs_application_users_in_hrs - 2017.12.15 at 09h 00m 58s.xml">
+      <configuration name="pl.com.bottega.hrs.application.users in hrs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FireEmployeeTest_shouldFireCreatedEmployee - 2017.11.11 at 09h 01m 32s.xml">
-      <configuration name="FireEmployeeTest.shouldFireCreatedEmployee" configurationId="JUnit" />
+    <history-entry file="pl_com_bottega_hrs_infrastructure_in_hrs - 2017.12.15 at 09h 01m 10s.xml">
+      <configuration name="pl.com.bottega.hrs.infrastructure in hrs" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203253000" />
+    <option name="totallyTimeSpent" value="291926000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1352,92 +1391,91 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39823008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32940018" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33963692" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33554816" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33388704" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31893688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27617604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33461168" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28072837" sideWeight="0.50664455" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33554816" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33388704" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33387887" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31893688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27312776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28072837" sideWeight="0.50664455" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="readme edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme edit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App.java</url>
-          <line>19</line>
+          <line>16</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java</url>
-          <line>143</line>
+          <line>142</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
@@ -1447,8 +1485,34 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/ChangeSalaryTest.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/ChangeSalaryTest.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/application/users/UserTest.java</url>
+          <line>21</line>
+          <properties class="pl.com.bottega.hrs.application.users.UserTest" method="shouldUpdateUserProfile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1457,203 +1521,166 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.11.0/mockito-core-2.11.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPAUserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="48" column="204" lean-forward="false" selection-start-line="48" selection-start-column="204" selection-end-line="48" selection-end-column="204" />
+        <state relative-caret-position="340">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#273#274#0" expanded="false" />
-            <element signature="e#309#310#0" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-            <element signature="e#465#466#0" expanded="false" />
-            <element signature="e#510#511#0" expanded="false" />
-            <element signature="e#1738#1739#0" expanded="false" />
-            <element signature="e#1797#1798#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/InfrastructureTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="391">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Optional.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/NoSuchEntityException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/ProfilingAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="129" lean-forward="false" selection-start-line="11" selection-start-column="129" selection-end-line="11" selection-end-column="129" />
+        <state relative-caret-position="357">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="59" column="73" lean-forward="false" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/Secured.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/SecurityAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#307#308#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#1379#1380#0" expanded="false" />
-            <element signature="e#1669#1670#0" expanded="false" />
-            <element signature="e#1698#1699#0" expanded="false" />
-            <element signature="e#1732#1733#0" expanded="false" />
-            <element signature="e#1791#1792#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/stream/Stream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="934" column="16" lean-forward="false" selection-start-line="934" selection-start-column="16" selection-end-line="934" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
-          <folding>
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#854#855#0" expanded="false" />
-            <element signature="e#1428#1429#0" expanded="false" />
-            <element signature="e#1457#1458#0" expanded="false" />
-            <element signature="e#1491#1492#0" expanded="false" />
-            <element signature="e#1550#1551#0" expanded="false" />
-            <element signature="e#1581#1582#0" expanded="false" />
-            <element signature="e#1626#1627#0" expanded="false" />
-            <element signature="e#1662#1663#0" expanded="false" />
-            <element signature="e#1701#1702#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddEmployeeCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#482#483#0" expanded="false" />
-            <element signature="e#514#515#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326">
-          <caret line="264" column="52" lean-forward="true" selection-start-line="264" selection-start-column="52" selection-end-line="264" selection-end-column="52" />
-          <folding>
-            <element signature="e#7769#7770#0" expanded="false" />
-            <element signature="e#7841#7842#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="208" column="14" lean-forward="true" selection-start-line="208" selection-start-column="14" selection-end-line="208" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="92" column="55" lean-forward="false" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AssignDepartmentToEmployeeCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="189" column="15" lean-forward="true" selection-start-line="188" selection-start-column="10" selection-end-line="189" selection-end-column="15" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeProfileCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeEmployeeTitleCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ChangeSalaryCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/CommandInvalidException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3876#3877#0" expanded="true" />
-            <element signature="e#3954#3955#0" expanded="true" />
-            <element signature="e#4292#4293#0" expanded="true" />
-            <element signature="e#4367#4368#0" expanded="true" />
-            <element signature="e#4417#4418#0" expanded="true" />
-            <element signature="e#4446#4447#0" expanded="true" />
-            <element signature="e#6225#6226#0" expanded="true" />
-            <element signature="e#6254#6255#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="false" />
+            <element signature="e#413#414#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/UnassignDepartmentCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/ValidationErrors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/events/SalaryChangedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/DepartmentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1665,271 +1692,256 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/CSVDepartmentRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/HrsConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Department.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPADepartmentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPAEmployeeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="289">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#981#982#0" expanded="false" />
+            <element signature="e#1012#1013#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/NoSuchEntityException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/AddDepartmentCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#260#261#0" expanded="false" />
-            <element signature="e#296#297#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/UnassignDepartmentHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeSearchResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="e#381#382#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeTitleHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeSearchCriteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="15" column="59" lean-forward="false" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DepartmentAssignmentHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddDepartmentHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="76" lean-forward="true" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/BasicEmployeeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeEmployeeProfileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPACriteriaEmployeeFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="57" column="46" lean-forward="true" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/JPQLEmployeeFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/EmployeeFinder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/DepartmentAssignment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="64" column="62" lean-forward="true" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/commands/FireEmployeeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/SalaryDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#488#489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/TitleDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#477#478#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/DetailedEmployeeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-729">
-          <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/ChangeSalaryHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Salary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/FireEmployeeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/application/AddEmployeeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/repositories/DepartmentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/infrastructure/StandardTimeProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/TimeProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/model/Title.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/listeners/SalaryChangedNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/EmployeesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/ErrorHandlers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/ui/rest/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/App3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/hrs/Hrs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/AcceptanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/ChangeSalaryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/ChangeTitleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/CreateEmployeeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/DepartmentAssignUnassignTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/EditProfileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/FireEmployeeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/acceptance/RegisterNewUserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/application/users/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EmployeeFinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#6604#6605#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/EntityManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/infrastructure/InfrastructureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/TimeMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/com/bottega/hrs/model/EmployeeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#2680#2681#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
           </folding>
         </state>
       </provider>

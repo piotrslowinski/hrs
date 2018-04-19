@@ -1,5 +1,8 @@
 package pl.com.bottega.hrs.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import pl.com.bottega.hrs.infrastructure.StandardTimeProvider;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -11,18 +14,6 @@ import java.time.LocalDate;
 @Table(name = "dept_emp")
 public class DepartmentAssignment {
 
-
-    public Department getDepartment() {
-        return id.department;
-    }
-
-    public boolean isAssigned(Department department) {
-        return isCurrent() && department.equals(id.department);
-    }
-
-    public void unassign() {
-        toDate = timeProvider.today();
-    }
 
     @Embeddable
     public static class DepartmentAssignmentId implements Serializable {
@@ -47,6 +38,7 @@ public class DepartmentAssignment {
     private DepartmentAssignmentId id;
 
     @Transient
+    @Autowired
     private TimeProvider timeProvider;
 
     @Column(name = "from_date")
@@ -63,6 +55,18 @@ public class DepartmentAssignment {
         this.timeProvider = timeProvider;
         this.fromDate = timeProvider.today();
         this.toDate = timeProvider.MAX_DATE;
+    }
+
+    public Department getDepartment() {
+        return id.department;
+    }
+
+    public boolean isAssigned(Department department) {
+        return isCurrent() && department.equals(id.department);
+    }
+
+    public void unassign() {
+        toDate = timeProvider.today();
     }
 
 

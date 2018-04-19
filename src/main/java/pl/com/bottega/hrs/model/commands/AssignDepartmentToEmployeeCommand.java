@@ -3,7 +3,7 @@ package pl.com.bottega.hrs.model.commands;
 /**
  * Created by user on 07.11.2017.
  */
-public class AssignDepartmentToEmployeeCommand {
+public class AssignDepartmentToEmployeeCommand implements Command {
 
     private Integer empNo;
 
@@ -23,5 +23,10 @@ public class AssignDepartmentToEmployeeCommand {
 
     public void setEmpNo(Integer empNo) {
         this.empNo = empNo;
+    }
+
+    public void validate(ValidationErrors errors){
+        validatePresence(errors,"empNo", empNo);
+        validatePresence(errors,"deptNo", deptNo);
     }
 }

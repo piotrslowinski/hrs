@@ -1,5 +1,8 @@
 package pl.com.bottega.hrs.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import pl.com.bottega.hrs.infrastructure.StandardTimeProvider;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,13 +15,12 @@ import java.time.LocalDate;
 public class Title {
 
 
-
-
     @Embeddable
     public static class TitleId implements Serializable {
 
-        @Column(name = "emp_no")
-        private Integer empNo;
+        @JoinColumn(name = "emp_no")
+        @ManyToOne
+        private Employee employee;
 
         @Transient
         private TimeProvider timeProvider;
@@ -32,8 +34,8 @@ public class Title {
         public TitleId() {
         }
 
-        public TitleId(Integer empNo, String title, TimeProvider timeProvider) {
-            this.empNo = empNo;
+        public TitleId(Employee employee, String title, TimeProvider timeProvider) {
+            this.employee = employee;
             this.title = title;
             this.timeProvider = timeProvider;
             this.fromDate = timeProvider.today();
@@ -58,12 +60,15 @@ public class Title {
     }
 
 
-    public Title(Integer empNo, String titleName, TimeProvider timeProvider){
-        this.id = new TitleId(empNo, titleName, timeProvider);
+    public Title(Employee employee, String titleName, TimeProvider timeProvider) {
+        this.id = new TitleId(employee, titleName, timeProvider);
         this.timeProvider = timeProvider;
         toDate = timeProvider.MAX_DATE;
     }
 
+    public void update(String newTitle) {
+        id.title = newTitle;
+    }
 
     public void terminate() {
         toDate = timeProvider.today();
@@ -87,6 +92,12 @@ public class Title {
 
     public boolean isCurrent() {
         return toDate.isAfter(timeProvider.today());
+    }
+
+    @Autowired
+    private void setTimeProvider(TimeProvider timeProvider) {
+        this.timeProvider = timeProvider;
+        id.timeProvider = timeProvider;
     }
 }
 

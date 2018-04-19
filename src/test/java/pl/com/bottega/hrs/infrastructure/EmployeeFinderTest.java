@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 public class EmployeeFinderTest extends InfrastructureTest {
 
     private int number = 1;
-//    private EmployeeFinder employeeFinder = new JPQLEmployeeFinder(createEntityManager());
+    //    private EmployeeFinder employeeFinder = new JPQLEmployeeFinder(createEntityManager());
     private EmployeeFinder employeeFinder = new JPACriteriaEmployeeFinder(createEntityManager());
     private EmployeeSearchCriteria criteria = new EmployeeSearchCriteria();
     private EmployeeSearchResults results;
@@ -116,7 +116,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
     }
 
     @Test
-    public void shouldSearchByHireDate(){
+    public void shouldSearchByHireDate() {
         // given
 
         // when
@@ -129,7 +129,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
     }
 
     @Test
-    public void shouldSearchBySalary(){
+    public void shouldSearchBySalary() {
         //given
         employee().withLastName("Nowak").withSalary(50000).create();
         employee().withLastName("Nowacki").withSalary(20000).create();
@@ -162,7 +162,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
     }
 
     @Test
-    public void shouldSearchByDepartments(){
+    public void shouldSearchByDepartments() {
         //given
         createDepartments();
         employee().withLastName("Nowak").withDepartment(d1).create();
@@ -197,7 +197,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
     }
 
     @Test
-    public void shouldSearchByTitle(){
+    public void shouldSearchByTitle() {
         //given
         employee().withLastName("Nowak").withTitle("CEO").create();
         employee().withLastName("Nowacki").withTitle("cleaner").create();
@@ -212,7 +212,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
     }
 
     @Test
-    public void shouldSearchByHistoricalTitle(){
+    public void shouldSearchByHistoricalTitle() {
         //given
         employee().withLastName("Nowak").withTitle("CEO", "1990-01-01").
                 withTitle("cleaner").create();
@@ -243,7 +243,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
         });
     }
 
-    private void assertLastNames(String ... lastNames) {
+    private void assertLastNames(String... lastNames) {
         assertEquals(Arrays.asList(lastNames),
                 results.getResults().stream().
                         map(BasicEmployeeDto::getLastName).collect(Collectors.toList())
@@ -346,7 +346,7 @@ public class EmployeeFinderTest extends InfrastructureTest {
             return this;
         }
 
-        public EmployeeBuilder withTitle (String title, String fromDate){
+        public EmployeeBuilder withTitle(String title, String fromDate) {
             consumers.add(employee -> {
                 timeMachine.travel(LocalDate.parse(fromDate));
                 employee.changeTitle(title);

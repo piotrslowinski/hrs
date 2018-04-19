@@ -9,5 +9,4 @@ public interface EmployeeFinder {
 
     DetailedEmployeeDto getEmployeeDetails(Integer empNo);
 
-    SalaryDto getSalaryInfo(Integer empNo);
 }

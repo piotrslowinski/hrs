@@ -19,18 +19,34 @@ public class Department {
     private String deptName;
 
 
-    public Department(){}
+    public Department() {
+    }
 
-    public Department(String deptNo, String deptName){
+    public Department(String deptNo, String deptName) {
         this.deptNo = deptNo;
         this.deptName = deptName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Department)) return false;
+
+        Department that = (Department) o;
+
+        return getDeptNo().equals(that.getDeptNo());
+    }
+
+    @Override
+    public int hashCode() {
+        return getDeptNo().hashCode();
     }
 
     public String getDeptNo() {
         return deptNo;
     }
 
-    public String getDeptName(){
+    public String getDeptName() {
         return deptName;
     }
 

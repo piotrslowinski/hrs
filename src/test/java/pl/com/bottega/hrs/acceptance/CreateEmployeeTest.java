@@ -11,6 +11,7 @@ import pl.com.bottega.hrs.application.DetailedEmployeeDto;
 import pl.com.bottega.hrs.application.EmployeeFinder;
 import pl.com.bottega.hrs.model.Address;
 import pl.com.bottega.hrs.model.Gender;
+import pl.com.bottega.hrs.model.TimeMachine;
 import pl.com.bottega.hrs.model.commands.AddDepartmentCommand;
 import pl.com.bottega.hrs.model.commands.AddEmployeeCommand;
 
@@ -24,7 +25,7 @@ import static org.junit.Assert.assertEquals;
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class CreateEmployeeTest {
+public class CreateEmployeeTest extends AcceptanceTest {
 
     @Autowired
     private AddEmployeeHandler addEmployeeHandler;
@@ -35,16 +36,15 @@ public class CreateEmployeeTest {
     @Autowired
     private AddDepartmentHandler addDepartmentHandler;
 
-
     @Test
-    public void shouldCreateEmployee(){
-        //given
+    public void shouldCreateEmployee() {
+        // given
         AddDepartmentCommand addDepartmentCommand = new AddDepartmentCommand();
         addDepartmentCommand.setName("Marketing");
         addDepartmentCommand.setNumber("d1");
         addDepartmentHandler.handle(addDepartmentCommand);
 
-        //when
+        // when
         AddEmployeeCommand addEmployeeCommand = new AddEmployeeCommand();
         addEmployeeCommand.setFirstName("Janek");
         addEmployeeCommand.setLastName("Nowak");

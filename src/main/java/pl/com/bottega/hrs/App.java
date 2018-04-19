@@ -9,13 +9,10 @@ import javax.persistence.Persistence;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory( "HRS" );
+public class App {
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("HRS");
 
         EntityManager em = emf.createEntityManager();
         Employee employee = em.find(Employee.class, 10001);

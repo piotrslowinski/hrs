@@ -4,13 +4,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pl.com.bottega.hrs.model.Employee;
 import pl.com.bottega.hrs.model.commands.ChangeEmployeeProfileCommand;
+import pl.com.bottega.hrs.model.commands.Command;
 import pl.com.bottega.hrs.model.repositories.EmployeeRepository;
 
 /**
  * Created by user on 07.11.2017.
  */
 @Component
-public class ChangeEmployeeProfileHandler {
+public class ChangeEmployeeProfileHandler implements Handler<ChangeEmployeeProfileCommand> {
 
     private EmployeeRepository repository;
 
@@ -19,9 +20,14 @@ public class ChangeEmployeeProfileHandler {
     }
 
     @Transactional
-    public void handle(ChangeEmployeeProfileCommand cmd){
+    public void handle(ChangeEmployeeProfileCommand cmd) {
         Employee employee = repository.get(cmd.getEmpNo());
         employee.updateProfile(cmd.getFirstName(), cmd.getLastName(), cmd.getBirthDate(), cmd.getAddress(), cmd.getGender());
         repository.save(employee);
+    }
+
+    @Override
+    public Class<? extends Command> getSupportedCommandClass() {
+        return ChangeEmployeeProfileCommand.class;
     }
 }

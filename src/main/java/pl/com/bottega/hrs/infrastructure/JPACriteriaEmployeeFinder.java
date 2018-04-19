@@ -1,6 +1,7 @@
 package pl.com.bottega.hrs.infrastructure;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import pl.com.bottega.hrs.application.*;
 import pl.com.bottega.hrs.model.Employee;
 import pl.com.bottega.hrs.model.Salary;
@@ -28,7 +29,10 @@ public class JPACriteriaEmployeeFinder implements EmployeeFinder {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<BasicEmployeeDto> cq = cb.createQuery(BasicEmployeeDto.class);
         Root employee = cq.from(Employee.class);
-        cq.select(cb.construct(BasicEmployeeDto.class, employee.get("empNo"), employee.get("firstName"), employee.get("lastName")));
+        cq.select(cb.construct(BasicEmployeeDto.class,
+                employee.get("empNo"),
+                employee.get("firstName"),
+                employee.get("lastName")));
 
         Predicate predicate = buildPredicate(criteria, cb, employee);
 
@@ -52,6 +56,7 @@ public class JPACriteriaEmployeeFinder implements EmployeeFinder {
     }
 
     @Override
+    @Transactional
     public DetailedEmployeeDto getEmployeeDetails(Integer empNo) {
         Employee employee = entityManager.find(Employee.class, empNo);
         if (employee == null)
@@ -59,13 +64,6 @@ public class JPACriteriaEmployeeFinder implements EmployeeFinder {
         return new DetailedEmployeeDto(employee);
     }
 
-    @Override
-    public SalaryDto getSalaryInfo(Integer empNo) {
-        Salary salary= entityManager.find(Salary.class, empNo);
-        if (salary == null)
-            throw new NoSuchEntityException();
-        return new SalaryDto(salary);
-    }
 
     private int searchTotalCount(EmployeeSearchCriteria criteria) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
@@ -94,7 +92,7 @@ public class JPACriteriaEmployeeFinder implements EmployeeFinder {
     }
 
     private Predicate addTitlePredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if (criteria.getTitles() != null){
+        if (criteria.getTitles() != null) {
             Join titles = employee.join("titles");
             predicate = cb.and(predicate, cb.isTrue(titles.get("id").get("title").in(criteria.getTitles())),
                     cb.equal(titles.get("toDate"), TimeProvider.MAX_DATE));
@@ -104,19 +102,19 @@ public class JPACriteriaEmployeeFinder implements EmployeeFinder {
     }
 
     private Predicate addSalaryToPredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if(criteria.getSalaryTo() != null){
+        if (criteria.getSalaryTo() != null) {
             Join salaries = employee.join("salaries");
             predicate = cb.and(predicate, cb.lessThanOrEqualTo(salaries.get("salary"), criteria.getSalaryTo()),
-                    cb.equal(salaries.get("toDate"),TimeProvider.MAX_DATE));
+                    cb.equal(salaries.get("toDate"), TimeProvider.MAX_DATE));
         }
         return predicate;
     }
 
     private Predicate addSalaryFromPredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if (criteria.getSalaryFrom() != null){
+        if (criteria.getSalaryFrom() != null) {
             Join salaries = employee.join("salaries");
             predicate = cb.and(predicate, cb.greaterThanOrEqualTo(salaries.get("salary"), criteria.getSalaryFrom()),
-                    cb.equal(salaries.get("toDate"),TimeProvider.MAX_DATE));
+                    cb.equal(salaries.get("toDate"), TimeProvider.MAX_DATE));
 
         }
         return predicate;
@@ -134,35 +132,35 @@ public class JPACriteriaEmployeeFinder implements EmployeeFinder {
     }
 
     private Predicate addHireDateToPredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if(criteria.getHireDateTo() != null) {
+        if (criteria.getHireDateTo() != null) {
             predicate = cb.and(predicate, cb.lessThanOrEqualTo(employee.get("hireDate"), criteria.getHireDateTo()));
         }
         return predicate;
     }
 
     private Predicate addHireDateFromPredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if(criteria.getHireDateFrom() != null){
+        if (criteria.getHireDateFrom() != null) {
             predicate = cb.and(predicate, cb.greaterThanOrEqualTo(employee.get("hireDate"), criteria.getHireDateFrom()));
         }
         return predicate;
     }
 
     private Predicate addBirthDateToPredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if(criteria.getBirthDateTo() != null){
+        if (criteria.getBirthDateTo() != null) {
             predicate = cb.and(predicate, cb.lessThanOrEqualTo(employee.get("birthDate"), criteria.getBirthDateTo()));
         }
         return predicate;
     }
 
     private Predicate addBirthDateFromPredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if(criteria.getBirthDateFrom() != null){
+        if (criteria.getBirthDateFrom() != null) {
             predicate = cb.and(predicate, cb.greaterThanOrEqualTo(employee.get("birthDate"), criteria.getBirthDateFrom()));
         }
         return predicate;
     }
 
     private Predicate addFirstNamePredicate(EmployeeSearchCriteria criteria, CriteriaBuilder cb, Root employee, Predicate predicate) {
-        if(criteria.getFirstNameQuery() != null) {
+        if (criteria.getFirstNameQuery() != null) {
             predicate = cb.and(predicate, cb.like(employee.get("firstName"), criteria.getFirstNameQuery() + "%"));
         }
         return predicate;

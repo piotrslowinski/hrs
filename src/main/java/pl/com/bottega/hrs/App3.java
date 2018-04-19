@@ -23,9 +23,9 @@ public class App3 {
         System.out.println("Podaj datę urodzenia od:");
         LocalDate dateFrom = LocalDate.parse(scanner.next());
         System.out.println("Podaj datę urodzenia do:");
-        LocalDate dateTo= LocalDate.parse(scanner.next());
+        LocalDate dateTo = LocalDate.parse(scanner.next());
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory( "HRS" );
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("HRS");
 
         EntityManager em = emf.createEntityManager();
         Query query = em.createQuery("SELECT e FROM Employee e WHERE e.lastName LIKE :lastName " +
@@ -35,7 +35,7 @@ public class App3 {
                 .setParameter("dateTo", dateTo);
 
         List queryResults = query.getResultList();
-        if(queryResults.size() == 0)
+        if (queryResults.size() == 0)
             System.out.println("---No matching employees---");
         queryResults.stream().forEach(System.out::println);
 

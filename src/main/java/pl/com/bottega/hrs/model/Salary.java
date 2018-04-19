@@ -1,6 +1,8 @@
 package pl.com.bottega.hrs.model;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import pl.com.bottega.hrs.infrastructure.StandardTimeProvider;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,13 +16,11 @@ import java.time.LocalDate;
 public class Salary {
 
 
-
-
     @Embeddable
-    public static class SalaryId implements Serializable{
+    public static class SalaryId implements Serializable {
 
         @Column(name = "emp_no")
-        private Integer empNo ;
+        private Integer empNo;
 
 
         @Column(name = "from_date")
@@ -32,7 +32,7 @@ public class Salary {
         public SalaryId() {
         }
 
-        public SalaryId(Integer empNo, TimeProvider timeProvider){
+        public SalaryId(Integer empNo, TimeProvider timeProvider) {
             this.empNo = empNo;
             this.timeProvider = timeProvider;
             this.fromDate = timeProvider.today();
@@ -55,14 +55,18 @@ public class Salary {
     private LocalDate toDate;
 
 
-    public Salary(Integer empNo, Integer salary, TimeProvider timeProvider){
+    public Salary(Integer empNo, Integer salary, TimeProvider timeProvider) {
         id = new SalaryId(empNo, timeProvider);
         this.salary = salary;
         this.timeProvider = timeProvider;
         toDate = TimeProvider.MAX_DATE;
     }
 
-    public Salary(){
+    public Salary() {
+    }
+
+    public void update(Integer newSalary) {
+        salary = newSalary;
     }
 
     public LocalDate getFromDate() {
@@ -89,5 +93,10 @@ public class Salary {
         return salary;
     }
 
+    @Autowired
+    private void setTimeProvider(TimeProvider timeProvider) {
+        this.timeProvider = timeProvider;
+        id.timeProvider = timeProvider;
+    }
 
 }

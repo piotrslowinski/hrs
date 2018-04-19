@@ -16,7 +16,6 @@ import static org.junit.Assert.assertNull;
 public class EntityManagerTest extends InfrastructureTest {
 
 
-
     @Test
     public void tracksChangesToEntities() {
         //given
@@ -87,7 +86,7 @@ public class EntityManagerTest extends InfrastructureTest {
     }
 
     @Test
-    public void removesEntities(){
+    public void removesEntities() {
         //given
         executeInTransaction(em -> {
             Employee employee = createEmployee("Jan");
@@ -108,7 +107,7 @@ public class EntityManagerTest extends InfrastructureTest {
     }
 
     @Test
-    public void cascadesOperations(){
+    public void cascadesOperations() {
         //given
         executeInTransaction((em) -> {
             Employee employee = createEmployee("Janek");
@@ -125,7 +124,7 @@ public class EntityManagerTest extends InfrastructureTest {
     private Employee tmpEmployee;
 
     @Test(expected = LazyInitializationException.class)
-    public void throwsLazyInitException(){
+    public void throwsLazyInitException() {
         // givn
         executeInTransaction((em) -> {
             Employee employee = createEmployee("Janek");
@@ -133,14 +132,12 @@ public class EntityManagerTest extends InfrastructureTest {
         });
 
         executeInTransaction((em) -> {
-           tmpEmployee = em.find(Employee.class, 1);
+            tmpEmployee = em.find(Employee.class, 1);
         });
 
         tmpEmployee.getSalaries().size();
 
     }
-
-
 
 
     private Employee createEmployee(String firstName) {
@@ -151,8 +148,6 @@ public class EntityManagerTest extends InfrastructureTest {
     private void updateFirstName(String newName, Employee employee) {
         employee.updateProfile(newName, "Nowak", LocalDate.now());
     }
-
-
 
 
 }

@@ -3,10 +3,9 @@ package pl.com.bottega.hrs.model.commands;
 /**
  * Created by user on 07.11.2017.
  */
-public class ChangeSalaryCommand {
+public class ChangeSalaryCommand implements Command {
 
     private Integer empNo;
-
     private Integer amount;
 
     public Integer getEmpNo() {
@@ -23,5 +22,10 @@ public class ChangeSalaryCommand {
 
     public void setAmount(Integer amount) {
         this.amount = amount;
+    }
+
+    public void validate(ValidationErrors errors) {
+        validatePresence(errors, "empNo", empNo);
+        validatePresence(errors, "amount", amount);
     }
 }
